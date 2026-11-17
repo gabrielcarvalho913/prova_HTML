@@ -1,0 +1,424 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+/* Remove as margens e espaçamentos padrões e facilita o cálculo dos tamanhos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define a largura do conteúdo e centraliza na página */
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Cria um sistema de grade com 12 colunas */
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: start;
+}
+
+/* Define quantas colunas cada elemento vai ocupar */
+.col-1 {
+  grid-column-end: span 1;
+}
+.col-2 {
+  grid-column-end: span 2;
+}
+.col-3 {
+  grid-column-end: span 3;
+}
+.col-4 {
+  grid-column-end: span 4;
+}
+.col-5 {
+  grid-column-end: span 5;
+}
+.col-6 {
+  grid-column-end: span 6;
+}
+.col-7 {
+  grid-column-end: span 7;
+}
+.col-8 {
+  grid-column-end: span 8;
+}
+.col-9 {
+  grid-column-end: span 9;
+}
+.col-10 {
+  grid-column-end: span 10;
+}
+.col-11 {
+  grid-column-end: span 11;
+}
+.col-12 {
+  grid-column-end: span 12;
+}
+
+/* Desloca os elementos para a direita dentro do grid */
+.offset-1 {
+  grid-column-start: 2;
+}
+.offset-2 {
+  grid-column-start: 3;
+}
+.offset-3 {
+  grid-column-start: 4;
+}
+.offset-4 {
+  grid-column-start: 5;
+}
+.offset-5 {
+  grid-column-start: 6;
+}
+.offset-6 {
+  grid-column-start: 7;
+}
+.offset-7 {
+  grid-column-start: 8;
+}
+.offset-8 {
+  grid-column-start: 9;
+}
+.offset-10 {
+  grid-column-start: 11;
+}
+.offset-11 {
+  grid-column-start: 12;
+}
+.offset-12 {
+  grid-column-start: 13;
+}
+
+/* Define os espaçamentos entre os elementos */
+.gap-1 {
+  gap: 5px;
+}
+
+.gap-2 {
+  gap: 10px;
+}
+
+.gap-3 {
+  gap: 15px;
+}
+
+.gap-4 {
+  gap: 20px;
+}
+
+/* Adiciona uma pequena margem inferior */
+.mb-1 {
+  margin-bottom: 5px;
+}
+
+/* Adiciona uma borda preta ao elemento */
+.border {
+  border: 1px solid #000;
+}
+
+/* Faz a imagem se adaptar à largura do elemento */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Faz a imagem ocupar todo o espaço disponível sem distorcer */
+.img-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================================
+   ESTILIZAÇÃO DO SITE MUNDO DOS GAMES
+========================================= */
+
+/* Define a fonte, o fundo e a cor padrão do site */
+body {
+  font-family: Arial, sans-serif;
+  background: #090719;
+  color: white;
+}
+
+/* Personaliza o cabeçalho do site */
+header {
+  background: #130d2c;
+  border-bottom: 2px solid #872cff;
+  padding: 15px 0;
+}
+
+/* Personaliza o logotipo */
+.logo {
+  color: #b65cff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Define a cor branca para o texto dentro do logotipo */
+.logo span {
+  color: white;
+}
+
+/* Organiza os links do menu lado a lado */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Personaliza os links do menu */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Muda a cor do link quando o mouse passa por cima ou quando a página está ativa */
+nav a:hover,
+nav a.ativo {
+  background: #872cff;
+}
+
+/* Cria o banner principal com fundo em degradê */
+.banner {
+  background: linear-gradient(120deg, #130d2c, #351078);
+  padding: 35px 0;
+}
+
+/* Define o tamanho do título do banner */
+.banner h1 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+/* Define a cor roxa para os textos destacados */
+.roxo {
+  color: #b65cff;
+}
+
+/* Personaliza os parágrafos do banner */
+.banner p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Estiliza os botões do site */
+.botao {
+  display: inline-block;
+  background: #872cff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Altera a cor do botão quando o mouse passa por cima */
+.botao:hover {
+  background: #b65cff;
+}
+
+/* Estiliza os títulos das seções */
+.titulo {
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-left: 4px solid #872cff;
+  padding-left: 10px;
+}
+
+/* Adiciona espaçamento acima e abaixo das seções */
+.secao {
+  padding: 30px 0;
+}
+
+
+/* =========================================
+   CARDS DA PÁGINA INICIAL
+========================================= */
+
+/* Cria os cartões dos jogos */
+.card {
+  background: #19132e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #39265d;
+}
+
+/* Ajusta as imagens dentro dos cartões */
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Adiciona espaçamento interno ao conteúdo dos cartões */
+.card-conteudo {
+  padding: 12px;
+}
+
+/* Define a cor dos títulos dos cartões */
+.card h3 {
+  color: #b65cff;
+  margin-bottom: 8px;
+}
+
+/* Estiliza as descrições dos cartões */
+.card p {
+  color: #ccc;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   PÁGINA HISTÓRIA
+========================================= */
+
+/* Estiliza os acontecimentos da linha do tempo */
+.evento {
+  background: #19132e;
+  border-left: 4px solid #872cff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Personaliza os títulos dos acontecimentos */
+.evento h3 {
+  color: #b65cff;
+  margin-bottom: 8px;
+}
+
+/* Personaliza os textos dos acontecimentos */
+.evento p {
+  color: #ccc;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   PÁGINA JOGOS
+========================================= */
+
+/* Organiza a imagem e as informações dos jogos lado a lado */
+.jogo {
+  display: flex;
+  background: #19132e;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #39265d;
+  min-height: 130px;
+}
+
+/* Ajusta a imagem dos jogos */
+.jogo img {
+  width: 40%;
+  object-fit: cover;
+}
+
+/* Adiciona espaço interno às informações dos jogos */
+.jogo-info {
+  padding: 12px;
+}
+
+/* Define a cor dos títulos dos jogos */
+.jogo-info h3 {
+  color: #b65cff;
+  margin-bottom: 8px;
+}
+
+/* Personaliza os textos das informações dos jogos */
+.jogo-info p {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+
+/* =========================================
+   PÁGINA CURIOSIDADES
+========================================= */
+
+/* Estiliza os quadros de curiosidades */
+.curiosidade {
+  background: #19132e;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border-left: 4px solid #872cff;
+}
+
+/* Personaliza os textos das curiosidades */
+.curiosidade p {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+/* Personaliza o rodapé de todas as páginas */
+footer {
+  background: #130d2c;
+  border-top: 1px solid #872cff;
+  padding: 15px 0;
+  margin-top: 30px;
+  color: #ccc;
+  font-size: 12px;
+}
+
+/* Centraliza os textos */
+.texto-centro {
+  text-align: center;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+/* Adapta a largura do site para telas menores */
+@media (max-width: 850px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* Adapta o menu, os títulos e os cards para celulares */
+@media (max-width: 600px) {
+
+  /* Centraliza o menu e permite que os links mudem de linha */
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Diminui o tamanho do título do banner */
+  .banner h1 {
+    font-size: 27px;
+  }
+
+  /* Coloca as informações dos jogos abaixo das imagens */
+  .jogo {
+    flex-direction: column;
+  }
+
+  /* Faz as imagens ocuparem toda a largura do card */
+  .jogo img {
+    width: 100%;
+    height: 140px;
+  }
+}
